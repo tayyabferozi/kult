@@ -20,7 +20,7 @@ const Vendor = () => {
 
       <div className="cards">
         <div className="slider">
-          <Swiper spaceBetween={28} slidesPerView={3}>
+          <Swiper spaceBetween={28}>
             {new Array(5).fill(0).map((el, idx) => {
               return (
                 <SwiperSlide key={"wender" + idx}>
