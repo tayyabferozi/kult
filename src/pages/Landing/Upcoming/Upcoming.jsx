@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { useTimer } from "react-timer-hook";
 
-import Button from "../../components/Button/Button";
-import Section from "../../components/Section/Section";
-import useSwiperRef from "../../hooks/useSwiperRef";
+import Button from "../../../components/Button/Button";
+import Section from "../../../components/Section/Section";
+import useSwiperRef from "../../../hooks/useSwiperRef";
 
 const time = new Date();
 time.setSeconds(time.getSeconds() + 600000); // 10 minutes timer
@@ -18,11 +18,11 @@ const Upcoming = () => {
     minutes,
     hours,
     days,
-    isRunning,
-    start,
-    pause,
-    resume,
-    restart,
+    // isRunning,
+    // start,
+    // pause,
+    // resume,
+    // restart,
   } = useTimer({
     expiryTimestamp: time,
   });
@@ -60,8 +60,8 @@ const Upcoming = () => {
             slidesPerView={3}
             modules={[Navigation, Pagination]}
             navigation={{
-              prevEl: prevEl,
-              nextEl: nextEl,
+              prevEl,
+              nextEl,
             }}
           >
             {new Array(7).fill(0).map((el, idx) => {

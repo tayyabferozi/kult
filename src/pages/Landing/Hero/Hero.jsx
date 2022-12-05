@@ -33,6 +33,15 @@ const Hero = () => {
             <img src="/assets/imgs/hero-right.png" alt="right" />
           </div>
         </div>
+
+        <div className="social-share">
+          <img src="/assets/imgs/logo-vintage.png" alt="vintage" />
+          <img src="/assets/imgs/logo-binance.png" alt="binance.png" />
+          <img src="/assets/imgs/logo-camfire.png" alt="vintage" />
+          <img src="/assets/imgs/logo-metamask.png" alt="vintage" />
+          <img src="/assets/imgs/logo-paypal.png" alt="vintage" />
+          <img src="/assets/imgs/logo-stonetech.png" alt="vintage" />
+        </div>
       </GridContainer>
     </Section>
   );
