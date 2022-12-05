@@ -5,3 +5,11 @@
 .fs-12 {
   font-size: 12px;
 }
+
+a {
+  @include transitioned;
+
+  &:hover {
+    color: $color1;
+  }
+}

@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import React from "react";
 
-const GridContainer = ({ className, children, ...rest }) => {
+const GridContainer = ({ rowClassName, className, children, ...rest }) => {
   return (
     <div className={clsx("container-fluid", className)} {...rest}>
-      <div className="row g-4">{children}</div>
+      <div className={clsx(rowClassName, "row g-4")}>{children}</div>
     </div>
   );
 };

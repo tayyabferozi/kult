@@ -11,22 +11,25 @@ import Team from "./Team/Team";
 import Igos from "./Igos/Igos";
 import Vendor from "./Vendor/Vendor";
 import Community from "../Community/Community";
+import MainLayout from "../../layout/MainLayout/MainLayout";
 
 const Landing = () => {
   return (
-    <div id="landing">
-      <Hero />
-      <Upcoming />
-      <Economy />
-      <Explore />
-      <Gaming />
-      <FAQ />
-      <Artist />
-      <Team />
-      <Igos />
-      <Vendor />
-      <Community />
-    </div>
+    <MainLayout>
+      <div id="landing">
+        <Hero />
+        <Upcoming />
+        <Economy />
+        <Explore />
+        <Gaming />
+        <FAQ />
+        <Artist />
+        <Team />
+        <Igos />
+        <Vendor />
+        <Community />
+      </div>
+    </MainLayout>
   );
 };
 

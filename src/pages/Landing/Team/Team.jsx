@@ -15,6 +15,15 @@ const teamMembers = [
   {
     img: "/assets/imgs/team-mem-3.png",
   },
+  {
+    img: "/assets/imgs/team-mem-1.png",
+  },
+  {
+    img: "/assets/imgs/team-mem-2.png",
+  },
+  {
+    img: "/assets/imgs/team-mem-3.png",
+  },
 ];
 
 const Team = () => {
@@ -50,7 +59,7 @@ const Team = () => {
         </div>
       </div>
 
-      <div className="slider">
+      <div className="slider mt-5">
         <div className="slider-main">
           <Swiper
             spaceBetween={28}
