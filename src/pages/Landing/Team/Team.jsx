@@ -62,8 +62,19 @@ const Team = () => {
       <div className="slider mt-5">
         <div className="slider-main">
           <Swiper
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              900: {
+                slidesPerView: 2,
+              },
+              1100: {
+                slidesPerView: 3,
+              },
+            }}
             spaceBetween={28}
-            slidesPerView={3}
+            // slidesPerView={3}
             modules={[Navigation, Pagination]}
             navigation={{
               prevEl,

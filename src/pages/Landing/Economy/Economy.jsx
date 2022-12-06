@@ -54,8 +54,8 @@ const Economy = () => {
             </div>
 
             <div className="row">
-              <div className="col-lg-6">
-                <div className="card three">
+              <div className="col-md-6">
+                <div className="card three mt-3">
                   <div className="text">
                     <strong>Liquidity Pools</strong>
 
@@ -67,8 +67,8 @@ const Economy = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6">
-                <div className="card four">
+              <div className="col-md-6">
+                <div className="card four mt-3">
                   <div className="text">
                     <strong>Wrapped ETH / BTC</strong>
 

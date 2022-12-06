@@ -1,4 +1,5 @@
 import React from "react";
+import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Button from "../../../components/Button/Button";
 
@@ -20,8 +21,16 @@ const Artist = () => {
 
       <div className="cards">
         <div className="sliders">
-          <Swiper spaceBetween={28} slidesPerView={3}>
-            {new Array(15).fill(0).map((el, idx) => {
+          <Swiper
+            pagination={true}
+            modules={[Pagination]}
+            breakpoints={{
+              1100: { slidesPerView: 3 },
+              800: { slidesPerView: 2 },
+            }}
+            spaceBetween={28}
+          >
+            {new Array(7).fill(0).map((el, idx) => {
               return (
                 <SwiperSlide>
                   <div className="card">
@@ -41,7 +50,9 @@ const Artist = () => {
                     <div className="text d-flex justify-content-between align-items-center">
                       <h5>Created By NFT</h5>
 
-                      <div className="small text-primary">123k Artwork</div>
+                      <div className="small">
+                        <span className="text-primary">123k</span> Artwork
+                      </div>
                     </div>
 
                     <Button primary>Follow Now</Button>

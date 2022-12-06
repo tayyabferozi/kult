@@ -7,14 +7,14 @@ const Footer = () => {
   return (
     <Section id="footer">
       <GridContainer rowClassName="main-row">
-        <div className="col-lg-3">
+        <div className="col-xxl-3 col-lg-4">
           <img className="logo" src="/assets/imgs/logo.png" alt="logo" />
           <p className="mt-4 small">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text.
           </p>
         </div>
-        <div className="col-lg-6">
+        <div className="col-xxl-6 col-lg-8">
           <div className="row">
             <div className="col-lg-5">
               <h6 className="text-primary">Categories</h6>
@@ -85,16 +85,18 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3">
-          <h5 className="text-primary">Newsletter</h5>
+        <div className="col-xxl-3 col-lg-12">
+          <div className="newsletter-wrap">
+            <h5 className="text-primary">Newsletter</h5>
 
-          <p className="my-4 small">
-            Lorem Ipsum is simply dummy text of the printing.
-          </p>
+            <p className="my-4 small">
+              Lorem Ipsum is simply dummy text of the printing.
+            </p>
 
-          <div className="newsletter-input">
-            <input type="text" placeholder="E-Mail Address" />
-            <img src="/assets/imgs/newsletter-arrow.png" alt="newsletter" />
+            <div className="newsletter-input">
+              <input type="text" placeholder="E-Mail Address" />
+              <img src="/assets/imgs/newsletter-arrow.png" alt="newsletter" />
+            </div>
           </div>
         </div>
       </GridContainer>

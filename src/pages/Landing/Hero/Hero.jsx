@@ -19,7 +19,7 @@ const Hero = () => {
             industry lorem Ipsum has been the industry's standard dummy text.
           </p>
 
-          <div className="d-flex align-items-center gap-10">
+          <div className="d-flex align-items-center gap-10 flex-sm-row flex-column">
             <Button primary className="mt-5">
               Explore Now
             </Button>
@@ -28,7 +28,7 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6 d-flex align-items-center justify-content-center">
           <div className="right">
             <img src="/assets/imgs/hero-right.png" alt="right" />
           </div>

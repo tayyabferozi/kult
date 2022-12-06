@@ -10,7 +10,7 @@ import Artist from "./Artist/Artist";
 import Team from "./Team/Team";
 import Igos from "./Igos/Igos";
 import Vendor from "./Vendor/Vendor";
-import Community from "../Community/Community";
+import Community from "./Community";
 import MainLayout from "../../layout/MainLayout/MainLayout";
 
 const Landing = () => {

@@ -1,8 +1,10 @@
 import clsx from "clsx";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Button from "../../../components/Button/Button";
+import { Navigation, Pagination } from "swiper";
 
+import useSwiperRef from "../../../hooks/useSwiperRef";
+import Button from "../../../components/Button/Button";
 import Section from "../../../components/Section/Section";
 
 const tabs = [
@@ -17,6 +19,8 @@ const tabs = [
 
 const Explore = () => {
   const [tabState, setTabState] = useState("Art");
+  const [nextEl, nextRef] = useSwiperRef();
+  const [prevEl, prevRef] = useSwiperRef();
 
   return (
     <Section id="landing-explore">
@@ -46,17 +50,38 @@ const Explore = () => {
 
       <div className="slides">
         <img
+          ref={prevRef}
           src="/assets/imgs/slider-arrow-2.png"
           className="arrow prev"
           alt="slier-arrow"
         />
         <img
+          ref={nextRef}
           src="/assets/imgs/slider-arrow-2.png"
           className="arrow next"
           alt="slier-arrow"
         />
         <div className="cards pt-5">
-          <Swiper spaceBetween={28} slidesPerView={3}>
+          <Swiper
+            breakpoints={{
+              1230: {
+                slidesPerView: 3,
+              },
+              900: {
+                slidesPerView: 2,
+              },
+              0: {
+                slidesPerView: 1,
+              },
+            }}
+            spaceBetween={28}
+            slidesPerView={3}
+            modules={[Navigation, Pagination]}
+            navigation={{
+              prevEl,
+              nextEl,
+            }}
+          >
             {new Array(9).fill(0).map((el, idx) => {
               return (
                 <SwiperSlide>

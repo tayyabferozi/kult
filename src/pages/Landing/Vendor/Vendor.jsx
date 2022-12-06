@@ -1,4 +1,5 @@
 import React from "react";
+import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import GridContainer from "../../../components/GridContainer";
 
@@ -20,7 +21,7 @@ const Vendor = () => {
 
       <div className="cards">
         <div className="slider">
-          <Swiper spaceBetween={28}>
+          <Swiper pagination={true} spaceBetween={28} modules={[Pagination]}>
             {new Array(5).fill(0).map((el, idx) => {
               return (
                 <SwiperSlide key={"wender" + idx}>
@@ -28,7 +29,7 @@ const Vendor = () => {
                     {new Array(9).fill(0).map((el, idx2) => {
                       return (
                         <div
-                          className="col-lg-4"
+                          className="col-xl-4 col-lg-6"
                           key={"vendor-card" + idx + idx2}
                         >
                           <div className="card">

@@ -46,6 +46,11 @@ const links = [
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSidebarActive, setIsSidebarActive] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarActive((prevState) => !prevState);
+  };
 
   useEffect(() => {
     const ev = (e) => {
@@ -66,7 +71,18 @@ const Navbar = () => {
         <a href="#0">
           <img className="logo" src="/assets/imgs/logo.png" alt="logo" />
         </a>
-        <div className="links">
+        <div className="hamburger" onClick={toggleSidebar}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className={clsx("links", isSidebarActive && "active")}>
+          <img
+            src="/assets/imgs/close.png"
+            alt="close"
+            className="close"
+            onClick={toggleSidebar}
+          />
           {links.map((el, idx) => {
             return (
               <a className={clsx(el.active && "active")} href={el.to}>

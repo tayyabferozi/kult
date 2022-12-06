@@ -1,6 +1,6 @@
 import React from "react";
-import GridContainer from "../../components/GridContainer";
-import Section from "../../components/Section/Section";
+import GridContainer from "../../../components/GridContainer";
+import Section from "../../../components/Section/Section";
 
 const Community = () => {
   return (
@@ -18,8 +18,8 @@ const Community = () => {
       </div>
 
       <div className="cards">
-        <GridContainer>
-          <div className="col-lg-4">
+        <GridContainer rowClassName="justify-content-center">
+          <div className="col-lg-4 col-md-6">
             <div className="card">
               <img src="/assets/imgs/com-telegram.png" alt="telegram" />
               <div className="text">
@@ -28,7 +28,7 @@ const Community = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-md-6">
             <div className="card">
               <img src="/assets/imgs/com-discord.png" alt="discord" />
               <div className="text">
@@ -37,7 +37,7 @@ const Community = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-md-6">
             <div className="card">
               <img src="/assets/imgs/com-twitter.png" alt="twitter" />
               <div className="text">
